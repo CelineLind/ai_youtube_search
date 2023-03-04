@@ -1,0 +1,29 @@
+Technologies:
+OpenAI Whisper Model for MP3 Transcription
+BERT Model for Embeddings
+
+Requirements:
+see requirements.txt
+
+~~~~~
+
+Stage 1 - core logic
+From a Python script...
+Step 1: Make a YouTube search, and get back the search result URLs
+Step 2: Get an mp3 from a YouTube video URL
+Step 3: Transform the mp3 into a format usable by the Whisper Model
+Step 4: Give to the Whisper Model and get back a transcription
+Step 5: Embed chunks of the transcription using BERT 
+    Step 5.5: Compare the embeddings to the embedding of the original search term using cosine distance
+
+Stage 2 - multiple videos compared
+Step 1: Provide the top 10 search results to the Whisper Model to get transcriptions
+Step 2: Embed the transcription chunks for each result
+Step 3: Compare the embedding chunks to the original search term using cosine distance
+Step 4: Rank the search results
+Step 5: Return the best matching video URL
+
+~~~~~
+
+Future:
+OpenAI GPT2 for Video Summarization for each result
