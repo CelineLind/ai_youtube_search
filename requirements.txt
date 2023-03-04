@@ -1,1 +1,4 @@
 pytube
+transformers
+pytorch
+youtube_search
